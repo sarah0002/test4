@@ -1,0 +1,113 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import gaven from "../assets/images/gaven.png";
+import gaven1 from "../assets/images/gaven1.svg";
+import gaven2 from "../assets/images/gaven2.svg";
+import wife from "../assets/images/wife.svg";
+import praktisk from "../assets/images/praktisk.svg";
+
+import Link from '../components/Link.astro';
+---
+<MainLayout title="FORSIDE" page="index">
+  <head>
+    <!-- animate.css import -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  </head>
+
+  <article class="relative bg-farve-200">
+    <h1 class="font-titan text-[60px] text-center pt-20">GAVEN</h1>
+        <div>
+        <Image
+          src={gaven}
+          alt="Ekstra billede"
+          class="absolute left-10 top-[120px]"
+          loading="lazy"
+        />
+      </div>
+
+     <!-- Tekst -->
+    <h2 class="font-titan text-[30px] text-center pt-[440px] uppercase">Nu til din gave</h2>
+    <p class="font-worksans uppercase px-8 pt-2 text-[18px]">
+      Klik på billedet her, for at åbne din gave
+    </p>
+
+    <svg class="ml-20" width="16" height="70" viewBox="0 0 16 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.19268 69.0401C6.53433 69.474 7.16306 69.5488 7.59699 69.2072L14.6682 63.6396C15.1022 63.298 15.177 62.6692 14.8353 62.2353C14.4937 61.8014 13.8649 61.7266 13.431 62.0682L7.14545 67.0172L2.19654 60.7316C1.85489 60.2977 1.22616 60.2229 0.792232 60.5645C0.358304 60.9062 0.283499 61.5349 0.625151 61.9688L6.19268 69.0401ZM15 1L14.007 0.881856L5.98538 68.3033L6.97837 68.4215L7.97137 68.5396L15.993 1.11814L15 1Z" fill="black"/>
+</svg>
+
+
+    <!-- Klik-område -->
+    <div id="click-area" class="relative w-full m-6 h-[600px] cursor-pointer">
+      <!-- Ekstra billede (gaven.png) -->
+  
+
+      <!-- Baggrundsbillede (gaven1) -->
+      <div>
+        <Image
+          src={gaven1}
+          alt="Baggrund"
+          class="absolute object-cover mx-16 mt-20 z-0"
+          loading="lazy"
+        />
+      </div>
+
+      <!-- Overlay (gaven2) -->
+      <div>
+        <Image
+          src={gaven2}
+          alt="Overlay"
+          id="overlay"
+          class="absolute inset-0 mx-6 mt-6  object-cover z-10 transition-opacity duration-300"
+          style="opacity: 1;"
+        />
+      </div>
+    </div>
+
+    <div>
+        <p class="font-worksans uppercase px-8 text-[18px]">Ud over koncertbilletterne ligger der hjemme tre helt nye og crisp wifebeaters klar.</p>
+     <Image
+          src={wife}
+          alt="wife"
+          class="mx-10"
+        />
+    </div>
+
+    <div>
+                <p class="font-worksans uppercase px-8 pt-20 text-[18px]">Det praktiske ;D</p>
+<Image
+          src={praktisk}
+          alt="wife"
+          class="pt-2 mx-10"
+        />
+                <p class="font-worksans uppercase px-8 pt-2 text-[18px]">d. 13 oktober 2025</p>
+                <p class="font-worksans uppercase px-8 pt-2 text-[18px]">KB hallen </p>
+                <p class="font-worksans uppercase px-8 pt-2 text-[18px]">DIG + MIG</p>
+
+    </div>
+
+   
+
+    <div class="bg-farve-100 text-farve-200 font-titan text-center text-[50px] mt-32">
+      <h2>ELSKER DIG ♡</h2>
+    </div>
+  </article>
+
+  <!-- Script (fungerer nu!) -->
+  <script type="module">
+    let clicks = 0;
+    const maxClicks = 10;
+    const overlay = document.getElementById("overlay");
+
+    document.getElementById("click-area").addEventListener("click", () => {
+      clicks++;
+      const newOpacity = Math.max(0, 1 - clicks / maxClicks);
+      overlay.style.opacity = newOpacity;
+
+      if (clicks === maxClicks) {
+        overlay.classList.add("animate__animated", "animate__fadeOut");
+        setTimeout(() => overlay.remove(), 1000);
+      }
+    });
+  </script>
+</MainLayout>

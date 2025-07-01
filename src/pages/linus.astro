@@ -1,0 +1,36 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import linus from "../assets/images/linus.png";
+import pinter from "../assets/images/pinter.png";
+
+import Link from '../components/Link.astro';
+---
+<MainLayout title="FORSIDE" page="index">
+	<article class="relative bg-farve-50">
+		<h1 class="font-titan text-[60px] text-center pt-20 ">LINUS</h1>
+		<div>
+		<Image
+          src={linus}
+          alt="Billeder"
+          class="absolute top-[110px]"
+          loading="lazy"
+        />
+		</div>
+
+        <p class="pt-[440px] px-6 uppercase">JEG ELSKER DIG - Hver gang jeg så et sødt citater, beskrivelser og billeder på Pinterest, gemte jeg det – fordi det fik mig til at tænke på dig. </p>
+		
+        <div>
+		<Image
+          src={pinter}
+          alt="Billeder"
+          class="mx-8 pt-8"
+          loading="lazy"
+        />
+		</div>
+
+		<div class="bg-farve-100 text-farve-50 font-titan text-center text-[50px] mt-32">
+			<h2>ELSKER DIG ♡</h2>
+		</div>
+	</article>
+</MainLayout>

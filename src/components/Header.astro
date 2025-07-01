@@ -4,14 +4,26 @@ let bgClass = "bg-farve-50"; // default
 
 if (pathname === "/omos") bgClass = "bg-farve-200";
 else if (pathname === "/maned") bgClass = "bg-farve-300";
-else if (pathname === "/linus") bgClass = "bg-green-100";
-else if (pathname === "/gaven") bgClass = "bg-yellow-100";
+else if (pathname === "/linus") bgClass = "bg-farve-50";
+else if (pathname === "/gaven") bgClass = "bg-farve-200";
+
+const links = [
+  { href: "/", label: "TILLYKKE" },
+  { href: "/omos", label: "SARANUS" },
+  { href: "/maned", label: "D.15" },
+  { href: "/linus", label: "LINUS" },
+  { href: "/gaven", label: "GAVEN" },
+];
+
 ---
 
 <div class={`flex justify-between gap-4 font-worksans text-black uppercase p-6 ${bgClass}`}>
-  <a href="/">TILLYKKE</a>
-  <a href="/omos">SARANUS</a>
-  <a href="/maned">D.15</a>
-  <a href="/linus">LINUS</a>
-  <a href="/gaven">GAVEN</a>
+  {links.map(link => (
+    <a 
+      href={link.href} 
+      class={pathname === link.href ? "font-bold" : ""}
+    >
+      {link.label}
+    </a>
+  ))}
 </div>
