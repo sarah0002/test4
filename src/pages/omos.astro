@@ -1,0 +1,29 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import os1 from "../assets/images/os1.svg";
+
+import Link from '../components/Link.astro';
+---
+<MainLayout title="FORSIDE" page="index">
+	<article class="relative bg-farve-200">
+    <div   class="absolute pt-[500px]">
+        <Image
+    src={os1}
+    alt="Billeder"
+    loading="lazy"
+        />
+  	 </div>
+  <h1 class="font-titan text-[60px] text-center pt-20">SARANUS</h1>
+		<h2 class="font-titan text-[30px] text-center pt-[400px] uppercase">VOres historie</h2>
+		<p class="font-worksans uppercase px-8 pt-2 text-[18px]">Jeg har samlet vores historie 
+de første 3 måneder i hvert fald :)</p>	
+
+		
+		</div>
+
+		<div class="bg-farve-100 text-farve-50 font-titan text-center text-[50px] mt-32">
+			<h2>ELSKER DIG ♡</h2>
+		</div>
+	</article>
+</MainLayout>
