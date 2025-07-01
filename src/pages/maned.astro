@@ -1,0 +1,40 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import forside from "../assets/images/forside.svg";
+import os from "../assets/images/os.svg";
+
+import Link from '../components/Link.astro';
+---
+<MainLayout title="FORSIDE" page="index">
+	<article class="relative bg-farve-50">
+		<h1 class="font-titan text-[60px] text-center pt-20 ">TILLYKKE</h1>
+		<div>
+		<Image
+          src={forside}
+          alt="Billeder"
+          class="absolute top-[50px]"
+          loading="lazy"
+        />
+		</div>
+		<h2 class="font-titan text-[30px] text-center pt-[400px] uppercase">med fødselsdagen</h2>
+		<h2 class="font-titan text-[30px] text-center pt-2 uppercase">22 år!! WUHU</h2>
+		<p class="font-worksans uppercase px-8 pt-2 text-[18px]">Jeg har i anledning af din fødselsdag lavet et lille hjemmeside til dig. </p>
+				<p class="font-worksans uppercase px-8 pt-2 text-[18px]">Jeg har samlet lidt forskellige ting, minder, billeder og din gave oppe i menuen. </p>
+
+						<p class="font-worksans uppercase px-8 pt-2 text-[18px]">Slå dig løs! elsker dig ♡</p>
+
+	 <div>
+		<Image
+          src={os}
+          alt="Billeder"
+          class="pt-20 px-10"
+          loading="lazy"
+        />
+		</div>
+
+		<div class="bg-farve-100 text-farve-50 font-titan text-center text-[50px] mt-32">
+			<h2>ELSKER DIG ♡</h2>
+		</div>
+	</article>
+</MainLayout>

@@ -11,6 +11,7 @@ export default {
           50: "#EBF1DF",
           100: "#32557B",
           200: "#F4FCFF",
+          300: "#FFEFE7",
         },
       },
 

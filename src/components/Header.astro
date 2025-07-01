@@ -1,10 +1,9 @@
 ---
-import { Astro } from "astro";
 const pathname = Astro.url.pathname;
 let bgClass = "bg-farve-50"; // default
 
 if (pathname === "/omos") bgClass = "bg-farve-200";
-else if (pathname === "/15") bgClass = "bg-blue-100";
+else if (pathname === "/maned") bgClass = "bg-farve-300";
 else if (pathname === "/linus") bgClass = "bg-green-100";
 else if (pathname === "/gaven") bgClass = "bg-yellow-100";
 ---
@@ -12,7 +11,7 @@ else if (pathname === "/gaven") bgClass = "bg-yellow-100";
 <div class={`flex justify-between gap-4 font-worksans text-black uppercase p-6 ${bgClass}`}>
   <a href="/">TILLYKKE</a>
   <a href="/omos">SARANUS</a>
-  <a href="/15">D.15</a>
+  <a href="/maned">D.15</a>
   <a href="/linus">LINUS</a>
   <a href="/gaven">GAVEN</a>
 </div>

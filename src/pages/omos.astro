@@ -2,27 +2,126 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import os1 from "../assets/images/os1.svg";
+import sms from "../assets/images/sms.svg";
+import gavlen from "../assets/images/gavlen.svg";
+import metro from "../assets/images/metro.svg";
+import roberta from "../assets/images/roberta.svg";
+import flue from "../assets/images/flue.svg";
+
 
 import Link from '../components/Link.astro';
 ---
 <MainLayout title="FORSIDE" page="index">
 	<article class="relative bg-farve-200">
-    <div   class="absolute pt-[500px]">
+    <div >
         <Image
     src={os1}
     alt="Billeder"
+	class="absolute top-[100px] left-[40px]"
     loading="lazy"
         />
   	 </div>
   <h1 class="font-titan text-[60px] text-center pt-20">SARANUS</h1>
 		<h2 class="font-titan text-[30px] text-center pt-[400px] uppercase">VOres historie</h2>
-		<p class="font-worksans uppercase px-8 pt-2 text-[18px]">Jeg har samlet vores historie 
+		<p class="font-worksans uppercase text-center px-8 pt-2 text-[18px]">Jeg har samlet vores historie 
 de første 3 måneder i hvert fald :)</p>	
 
-		
-		</div>
+<sektion class="font-worksans uppercase m-[10px]">
+<div class="px-6 pt-16">
+<p class="font-bold">d. 6 feb 2024</p>
+<p>Du sendte en sms, og vi aftalte at mødes 
+til en kaffe - d. 15/02.</p>
+<Image
+    src={sms}
+    alt="Billeder"
+	class="pt-2"
+    loading="lazy"
+        />
+</div>
 
-		<div class="bg-farve-100 text-farve-50 font-titan text-center text-[50px] mt-32">
+<div class="px-6 pt-16">
+<p class="font-bold">d. 15 feb 2024</p>
+<p>Vores først date - på gavlen. </p>
+<Image
+    src={gavlen}
+    alt="Billeder"
+	class="pt-2"
+    loading="lazy"
+        />
+</div>
+
+<div class="px-6 pt-16">
+<p class="font-bold">d. 19 feb 2024</p>
+<p>Vores anden date - Hjemme hos dig.
+Risotto, vin og en masse snak! Vi snakker
+ikke om glasset der blev tabt.  </p>
+
+</div>
+
+<div class="px-6 pt-16">
+<p class="font-bold">d. 27 feb 2024</p>
+<p>tredje date på jojo 
+og første kys, på enghave metro.</p>
+<Image
+    src={metro}
+    alt="Billeder"
+	class="pt-2"
+    loading="lazy"
+        />
+</div>
+
+<div class="px-6 pt-16">
+<p class="font-bold">en masse flere dates</p>
+<p>datesne stoppede ikke der. Endnu 
+flere hyggelige stunder og gode minder  første til...</p>
+
+</div>
+
+<div class="px-6 pt-16">
+<p class="font-bold">d. 15 maj 2024</p>
+<p>spurgte du mig om kærester. med alt 
+planlagt spurgte ud mig præcis tre
+måneder efter vores første date 
+(fordi efter tre måneder kan en person ikke lyve mere)</p>
+<Image
+    src={roberta}
+    alt="Billeder"
+	class="pt-2"
+    loading="lazy"
+        />
+</div>
+
+<div class="px-6 pt-16">
+<p class="font-bold">d. 1 Juni 2024</p>
+<p>Første gang jeg skulle møde din 
+familie. Og første gang på Fluebjerg 
+gaard til fødselsdagsfest i haven.</p>
+<Image
+    src={flue}
+    alt="Billeder"
+	class="pt-2"
+    loading="lazy"
+        />
+</div>
+
+<div class="px-6 pt-16">
+<p class="font-bold">d. 1 Juni 2024</p>
+<p>Første gang jeg skulle møde din 
+familie. Og første gang på Fluebjerg 
+gaard til fødselsdagsfest i haven.</p>
+<Image
+    src={flue}
+    alt="Billeder"
+	class="pt-2"
+    loading="lazy"
+        />
+</div>
+
+</sektion>
+		
+
+
+		<div class="bg-farve-100 text-farve-200 font-titan text-center text-[50px] mt-32">
 			<h2>ELSKER DIG ♡</h2>
 		</div>
 	</article>
